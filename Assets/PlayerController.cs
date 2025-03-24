@@ -37,4 +37,12 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "obstacle")
+        {
+            Debug.Log("Game Over");
+        }
+    }
 }
